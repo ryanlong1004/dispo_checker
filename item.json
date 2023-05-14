@@ -1,0 +1,159 @@
+{
+    "_id": "64551417e4ff930001397c94",
+    "id": "64551417e4ff930001397c94",
+    "AdditionalOptions": [],
+    "brandId": "20c4e7d1-231c-4718-b10e-68b728bbcc60",
+    "brandName": "Essence",
+    "CBD": null,
+    "CBDContent": {
+        "unit": "PERCENTAGE",
+        "range": null,
+        "__typename": "ProductPotency"
+    },
+    "comingSoon": null,
+    "createdAt": "1683297303738",
+    "DispensaryID": "5f07ab86d0b0134ca75fa12b",
+    "enterpriseProductId": "645515aca162a70007e50c45",
+    "Image": "https://s3-us-west-2.amazonaws.com/dutchie-images/b135c9dd7a2eab9e9c7f9249e1fb02f1",
+    "images": [
+        {
+            "url": "https://s3-us-west-2.amazonaws.com/dutchie-images/b135c9dd7a2eab9e9c7f9249e1fb02f1",
+            "description": null,
+            "active": true,
+            "__typename": "Products_Images"
+        }
+    ],
+    "imgixSettings": {
+        "productCard": {
+            "border": null,
+            "mark": null,
+            "markscale": null,
+            "markpad": null,
+            "fit": null,
+            "__typename": "ImgixSettings"
+        },
+        "productModal": {
+            "border": null,
+            "mark": null,
+            "markscale": null,
+            "markpad": null,
+            "fit": null,
+            "__typename": "ImgixSettings"
+        },
+        "__typename": "Products_imgixSettings"
+    },
+    "measurements": {
+        "netWeight": {
+            "unit": "MILLIGRAMS",
+            "values": [
+                1000
+            ],
+            "__typename": "Products_measurement"
+        },
+        "volume": null,
+        "__typename": "Products_measurements"
+    },
+    "medicalOnly": false,
+    "medicalPrices": [
+        60
+    ],
+    "medicalSpecialPrices": [],
+    "wholesalePrices": null,
+    "Name": "Milk & Cookies | Sugar",
+    "nonArmsLength": null,
+    "Options": [
+        "1g"
+    ],
+    "limitsPerCustomer": null,
+    "manualInventory": null,
+    "POSMetaData": {
+        "canonicalID": "12656773",
+        "canonicalBrandName": null,
+        "children": [
+            {
+                "canonicalEffectivePotencyMg": 0,
+                "option": "1g",
+                "quantity": 11,
+                "quantityAvailable": 11,
+                "kioskQuantityAvailable": 11,
+                "standardEquivalent": null,
+                "recEquivalent": null,
+                "__typename": "Products_POSMetaData_children"
+            }
+        ],
+        "__typename": "Products_POSMetaData"
+    },
+    "Prices": [
+        60
+    ],
+    "pricingTierData": null,
+    "recOnly": false,
+    "recPrices": [
+        60
+    ],
+    "recSpecialPrices": [],
+    "special": null,
+    "specialData": null,
+    "Status": "Active",
+    "strainType": "Indica",
+    "subcategory": "sugar",
+    "THC": null,
+    "THCContent": {
+        "unit": "PERCENTAGE",
+        "range": [
+            79,
+            80
+        ],
+        "__typename": "ProductPotency"
+    },
+    "type": "Concentrate",
+    "vapeTaxApplicable": null,
+    "weight": 1000,
+    "featured": null,
+    "isBelowThreshold": false,
+    "isBelowKioskThreshold": false,
+    "optionsBelowThreshold": [],
+    "optionsBelowKioskThreshold": [],
+    "cName": "milk-cookies-sugar",
+    "pastCNames": [
+        "milk-cookies-sugar"
+    ],
+    "brandLogo": null,
+    "bottleDepositTaxCents": null,
+    "__typename": "Products",
+    "brand": {
+        "id": "20c4e7d1-231c-4718-b10e-68b728bbcc60",
+        "_id": "20c4e7d1-231c-4718-b10e-68b728bbcc60",
+        "description": "",
+        "imageUrl": null,
+        "name": "Essence",
+        "__typename": "Brand"
+    },
+    "effects": {
+        "relaxed": 9,
+        "sleepy": 8,
+        "happy": 8,
+        "euphoric": 8
+    },
+    "popularSortKey": null,
+    "cannabinoidsV2": [
+        {
+            "value": 0.371,
+            "unit": "PERCENTAGE",
+            "cannabinoid": {
+                "name": "CBG (Cannabigerol)",
+                "__typename": "Cannabinoid"
+            },
+            "__typename": "Products_CannabinoidV2"
+        },
+        {
+            "value": 3.387,
+            "unit": "PERCENTAGE",
+            "cannabinoid": {
+                "name": "CBGA (Cannabigerolic acid)",
+                "__typename": "Cannabinoid"
+            },
+            "__typename": "Products_CannabinoidV2"
+        }
+    ]
+}

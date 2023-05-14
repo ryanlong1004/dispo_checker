@@ -27,20 +27,19 @@ def fetch_items():
         ]
     ]
 
-
 def main():
     connection = get_db_connection("./db")
     cursor = connection.cursor()
-
     create_table(cursor)
     
     for _item in fetch_items():
         insert_item(cursor, _item)
     connection.commit()
+    
     logging.info("finding best available")
     best = find_best_available(cursor)
+    
     print(best)
-    print(type(best))
 
 
 if __name__ == "__main__":
