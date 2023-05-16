@@ -1,4 +1,5 @@
 import sqlite3
+from item import Item
 
 
 def get_db_connection(name):
@@ -35,10 +36,13 @@ def insert_item(cursor: sqlite3.Cursor, item):
             item.brandname,
             item.quantity_available,
             item.category,
-            item.strain
+            item.strain,
         ],
     )
-    
-def find_best_available(cursor: sqlite3.Cursor):
-    result = cursor.execute("""select * from items where category not in ('hash', 'sugar', 'rso', 'diamonds', 'applicators') ORDER BY timestamp DESC, price ASC, thc_percentage DESC;""")
+
+
+def find_best_available(cursor: sqlite3.Cursor) -> Item:
+    result = cursor.execute(
+        """select * from items where category not in ('hash', 'sugar', 'rso', 'diamonds', 'applicators') ORDER BY timestamp DESC, price ASC, thc_percentage DESC;"""
+    )
     return result.fetchone()

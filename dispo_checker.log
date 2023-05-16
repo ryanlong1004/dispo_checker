@@ -1,0 +1,5 @@
+22:24:26,401 root INFO loading items
+22:24:26,401 root INFO fetching data
+22:24:26,407 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): dutchie.com:443
+22:24:27,197 urllib3.connectionpool DEBUG https://dutchie.com:443 "GET /graphql?operationName=FilteredProducts&variables=%7B%22includeEnterpriseSpecials%22%3Afalse%2C%22includeCannabinoids%22%3Atrue%2C%22productsFilter%22%3A%7B%22dispensaryId%22%3A%225f07ab86d0b0134ca75fa12b%22%2C%22option%22%3A%221g%22%2C%22pricingType%22%3A%22rec%22%2C%22strainTypes%22%3A%5B%5D%2C%22subcategories%22%3A%5B%5D%2C%22Status%22%3A%22Active%22%2C%22types%22%3A%5B%22Concentrate%22%5D%2C%22useCache%22%3Afalse%2C%22sortDirection%22%3A1%2C%22sortBy%22%3A%22price%22%2C%22isDefaultSort%22%3Afalse%2C%22bypassOnlineThresholds%22%3Afalse%2C%22isKioskMenu%22%3Afalse%2C%22removeProductsBelowOptionThresholds%22%3Atrue%7D%2C%22page%22%3A0%2C%22perPage%22%3A50%7D&extensions=%7B%22persistedQuery%22%3A%7B%22version%22%3A1%2C%22sha256Hash%22%3A%220e884328c01ef8ed540d4bbd27101ee58fedaf5cddda6c499169209b53fdf574%22%7D%7D HTTP/1.1" 200 None
+22:24:27,240 root INFO finding best available

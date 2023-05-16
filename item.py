@@ -31,12 +31,12 @@ class Item:
     @property
     def quantity_available(self):
         return self.data["POSMetaData"]["children"][0]["quantityAvailable"]
-    
+
     @property
     def category(self):
-        #TODO Sometimes comes back as 'None', how to handle?
-        return self.data['subcategory']
-    
+        # TODO Sometimes comes back as 'None', how to handle?
+        return self.data["subcategory"]
+
     @property
     def strain(self):
-        return self.data['strainType']
+        return self.data["strainType"]
