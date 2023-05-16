@@ -31,7 +31,7 @@ def load_items(data):
 def fetch_data():
     """fetch live data from url"""
     logging.info("fetching data")
-    return requests.get(URL, timeout=60).text
+    return requests.get(URL).text
 
 
 def fetch_items():
@@ -57,8 +57,9 @@ def main():
 
     logging.info("finding best available")
     best = find_best_available(cursor)
-    
-    print(best)
+
+    if best.price < 40:
+        print(best)
 
 
 if __name__ == "__main__":
