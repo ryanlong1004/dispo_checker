@@ -1,10 +1,13 @@
 import json
 import os
 import pathlib
-import smtplib, ssl
+import smtplib
+import ssl
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-config = json.load(open(pathlib.Path(ROOT_DIR, "./config.json"), "r+"))
+config = json.load(
+    open(pathlib.Path(ROOT_DIR, "./config.json"), "r+", encoding="utf-8")
+)
 config["root_dir"] = os.path.dirname(os.path.abspath(__file__))
 
 

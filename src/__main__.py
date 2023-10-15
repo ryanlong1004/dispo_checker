@@ -2,13 +2,18 @@
 
 import json
 import logging
-from notifier_text import send_email
 
 import requests
 
-from dbb import get_db_connection, create_table, insert_item, find_best_available
+# from src.notifier_text import send_email
+from src.dbb import (create_table, find_best_available, get_db_connection,
+                     insert_item)
+from src.item import Item
 
-from item import Item
+headers = {
+    "content-type": "application/ld+json",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0",
+}
 
 logging.basicConfig(
     filename="./dispo_checker.log",
@@ -31,7 +36,7 @@ def load_items(data):
 def fetch_data():
     """fetch live data from url"""
     logging.info("fetching data")
-    return requests.get(URL).text
+    return requests.get(URL, headers=headers, timeout=60).text
 
 
 def fetch_items():
@@ -47,7 +52,7 @@ def fetch_items():
 
 def main():
     """main point of execution"""
-    connection = get_db_connection("./db")
+    connection = get_db_connection("./dispo_checker.db")
     cursor = connection.cursor()
     create_table(cursor)
 
@@ -56,9 +61,17 @@ def main():
     connection.commit()
 
     logging.info("finding best available")
-    best = find_best_available(cursor)
+    ignored_categories = [
+        "hash",
+        "sugar",
+        "rso",
+        "diamonds",
+        "applicators",
+        "infused-flower",
+    ]
+    best = find_best_available(cursor, ignored_categories)
 
-    if best.price < 40:
+    if best["price"] < 40:
         print(best)
 
 
