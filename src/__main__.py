@@ -1,13 +1,12 @@
 """Main point of execution"""
-
 import json
 import logging
 
+import click
 import requests
 
 # from src.notifier_text import send_email
-from src.dbb import (create_table, find_best_available, get_db_connection,
-                     insert_item)
+from src.dbb import create_table, find_best_available, get_db_connection, insert_item
 from src.item import Item
 
 headers = {
@@ -50,8 +49,10 @@ def fetch_items():
     ]
 
 
-def main():
-    """main point of execution"""
+@click.command()
+@click.option("-b", "--best-price", default=None, show_default=True, type=float)
+def main(best_price):
+    """Collects information from a Dutchie dispensary"""
     connection = get_db_connection("./dispo_checker.db")
     cursor = connection.cursor()
     create_table(cursor)
@@ -71,9 +72,6 @@ def main():
     ]
     best = find_best_available(cursor, ignored_categories)
 
-    if best["price"] < 40:
-        print(best)
-
-
-if __name__ == "__main__":
-    main()
+    if best_price:
+        if best["price"] < best_price:
+            print(best)
